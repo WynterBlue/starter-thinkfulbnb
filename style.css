@@ -28,6 +28,12 @@ section {
 section.alternate-background {
   background-color: #00a699;
   color: #fff;
+
+}
+
+section.alternate-background img {
+  width: 100%;
+  margin-bottom: 10px;
 }
 
 main img {
@@ -50,18 +56,28 @@ main img {
   flex: 2;
 }
 
+.ideas img{
+  width: 100%;
+  margin-bottom: 10px;
+}
+
 /* -------  Navigation ------- */
 
 header {
   background-color: #ff385c;
-  padding: 20px 20px 0 20px;
+  padding: 20px 20px 5px 20px;
   text-align: center;
 }
 
 .logo {
   font-family: "Pangolin", cursive;
-  font-size: 72px;
+  font-size: 60px;
   color: #fff;
+}
+
+header nav ul {
+  display: flex;
+  justify-content: center;
 }
 
 header nav ul li {
@@ -95,6 +111,11 @@ form input {
   width: 180px;
 }
 
+form div {
+  display: flex;
+  justify-content: space-around;
+}
+
 form button {
   background-color: #ff385c;
   border: none;
@@ -117,3 +138,78 @@ footer p {
 }
 
 /* -------  Media Query ------- */
+@media all and (min-width: 480px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+  }
+
+  header div.logo {
+    font-size: 42px
+  }
+
+  form {
+    display: flex;
+  }
+
+  form div{
+    flex-direction: column;
+    width: 20%
+  }
+
+  form button {
+    font-size: 18px;
+  }
+  form select,
+  form input {
+  margin-bottom: 20px;
+  width: 80%;
+  }
+
+  .about-section div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .about-section div img {
+    padding: 10px;
+    width: 20%
+  }
+
+  .about-section div p {
+    padding: 20px
+  }
+
+ .ideas-img {
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+ }
+
+ .ideas-img div {
+  width: 48%;
+ }
+
+ #host {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+#host > div {
+  flex-basis: 50%;
+  padding: 10px;
+}
+
+#host img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+
+}
